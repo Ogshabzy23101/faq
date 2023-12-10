@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap');
+
+:root {
+ --primary: hsl(0, 0%, 100%);
+ --primary-2: hsl(275, 100%, 97%);
+ --secondary: hsl(292, 16%, 49%);
+ --secondary-2: hsl(292, 42%, 14%);
+ --mainFont: 'Work Sans', sans-serif;
+}
+
+*,
+::after,
+::before {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ padding: auto;
+}
+
+main {
+ background-image: url(./images/background-pattern-mobile.svg);
+ background-position: top;
+ background-repeat: no-repeat;
+ background-color: var(--secondary);
+ display: grid;
+ grid-template-columns: 1fr;
+ place-items: center;
+ font-family: var(--mainFont);
+ width: 100vw;
+ max-width: 1440px;
+ min-height: 100vh;
+ margin: auto;
+}
+
+@media screen and (min-width:380px) {
+ main {
+  background-image: url(./images/background-pattern-desktop.svg);
+  background-size: contain;
+  width: 80vw;
+ }
+
+ .container {
+  max-width: 600px;
+ }
+}
+
+.container {
+ border-radius: 10px;
+ margin: auto;
+ width: 80%;
+ display: grid;
+ grid-template-columns: 1fr;
+ gap: 1.5rem;
+ background-color: var(--primary);
+ padding: 1rem;
+}
+
+.tittle {
+ display: flex;
+ flex-direction: row;
+ place-items: center;
+}
+
+.tittle img {
+ width: 25px;
+ margin-right: 25px;
+}
+
+.tittle h1 {
+ font-family: Work Sans;
+ font-weight: 700;
+ color: var(--secondary-2);
+ font-size: 2rem;
+}
+
+.ques-container {
+ display: grid;
+ grid-template-columns: 1fr;
+ max-width: 100%;
+ 
+}
+
+.ques-title {
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ color: var(--secondary-2);
+ font-size: 12px;
+ margin-bottom: 10px;
+}
+
+.ques-title h3 {
+ width: 75%;
+ font-weight: 700;
+}
+
+.ques-title h3:hover {
+ color: rgb(227, 59, 227);
+ cursor: pointer;
+}
+
+.ques-title button {
+ border: none;
+ background: none;
+ display: flex;
+ flex-direction: row;
+}
+
+.ques-text {
+ color: var(--secondary);
+ font-weight: 400;
+ display: none;
+ width: 90%;
+ line-height: 1.5rem;
+}
+
+.show-text .ques-text {
+ display: block;
+
+}
+
+.minus {
+ display: none;
+}
+
+.show-text .minus {
+ display: inline;
+}
+
+.show-text .plus {
+ display: none;
+}
+
+
+
+.attribution {
+ font-size: 11px;
+ text-align: center;
+ position: absolute;
+ bottom: 0;
+ left: 35%;
+ margin: 0;
+ 
+}
+
+.attribution a {
+ color: hsl(228, 45%, 44%);
+}
