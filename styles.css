@@ -16,15 +16,11 @@
  box-sizing: border-box;
 }
 
-body {
- padding: auto;
-}
-
 main {
  background-image: url(./images/background-pattern-mobile.svg);
  background-position: top;
  background-repeat: no-repeat;
- background-color: var(--secondary);
+ background-color: var(--primary-2);
  display: grid;
  grid-template-columns: 1fr;
  place-items: center;
@@ -32,20 +28,22 @@ main {
  width: 100vw;
  max-width: 1440px;
  min-height: 100vh;
- margin: auto;
 }
 
 @media screen and (min-width:380px) {
  main {
   background-image: url(./images/background-pattern-desktop.svg);
   background-size: contain;
-  width: 100vw;
-  padding: 2rem 0;
  }
 
  .container {
   max-width: 600px;
-  margin: 2rem 0;
+  margin: auto;
+  padding: 1rem 2rem;
+ }
+
+ .ques-title h3{
+  font-size: 0.9rem;
  }
 }
 
@@ -57,7 +55,8 @@ main {
  grid-template-columns: 1fr;
  gap: 1.5rem;
  background-color: var(--primary);
- padding: 1rem;
+ padding: 1rem 1.5rem;
+ min-height: 80vh;
 }
 
 .tittle {
@@ -90,12 +89,12 @@ main {
  flex-direction: row;
  justify-content: space-between;
  color: var(--secondary-2);
- font-size: 12px;
+ font-size: 0.75rem;
  margin-bottom: 10px;
 }
 
 .ques-title h3 {
- width: 75%;
+ width: 80%;
  font-weight: 700;
 }
 
@@ -116,12 +115,14 @@ main {
  font-weight: 400;
  display: none;
  width: 90%;
- line-height: 1.5rem;
+ line-height: 1.25rem;
+
 }
 
 .show-text .ques-text {
  display: block;
-
+ transform: translateY(-100);
+ transition: all 10s ease-in;
 }
 
 .minus {
